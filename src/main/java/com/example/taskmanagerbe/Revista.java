@@ -1,9 +1,6 @@
 package com.example.taskmanagerbe;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Revista {
@@ -13,23 +10,23 @@ public class Revista {
     private String denumire;
     private int an;
 
-    private int idClasificare; // enum?
+    public Revista(String denumire, int an, TipRevista tipRevista, String ISSN, String eISSN, float factorDeImpact) {
+        this.denumire = denumire;
+        this.an = an;
+        this.tipRevista = tipRevista;
+        this.ISSN = ISSN;
+        this.eISSN = eISSN;
+        this.factorDeImpact = factorDeImpact;
+    }
 
+    @ManyToOne
+    private TipRevista tipRevista;
     private String ISSN;
     private String eISSN;
 
     private float factorDeImpact;
 
     public Revista() {
-    }
-
-    public Revista(String denumire, int an, int idClasificare, String ISSN, String eISSN, float factorDeImpact) {
-        this.denumire = denumire;
-        this.an = an;
-        this.idClasificare = idClasificare;
-        this.ISSN = ISSN;
-        this.eISSN = eISSN;
-        this.factorDeImpact = factorDeImpact;
     }
 
     public String getDenumire() {
@@ -46,14 +43,6 @@ public class Revista {
 
     public void setAn(int an) {
         this.an = an;
-    }
-
-    public int getIdClasificare() {
-        return idClasificare;
-    }
-
-    public void setIdClasificare(int idClasificare) {
-        this.idClasificare = idClasificare;
     }
 
     public String getISSN() {
