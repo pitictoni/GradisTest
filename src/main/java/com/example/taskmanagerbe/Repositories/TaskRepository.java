@@ -1,6 +1,6 @@
-package com.example.taskmanagerbe;
+package com.example.taskmanagerbe.Repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.taskmanagerbe.Entities.Task;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

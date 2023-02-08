@@ -1,4 +1,4 @@
-package com.example.taskmanagerbe;
+package com.example.taskmanagerbe.Entities;
 
 import javax.persistence.*;
 

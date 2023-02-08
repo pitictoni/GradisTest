@@ -1,5 +1,7 @@
-package com.example.taskmanagerbe;
+package com.example.taskmanagerbe.Controllers;
 
+import com.example.taskmanagerbe.Entities.Task;
+import com.example.taskmanagerbe.Services.TaskServices;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

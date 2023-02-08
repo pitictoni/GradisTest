@@ -1,4 +1,4 @@
-package com.example.taskmanagerbe;
+package com.example.taskmanagerbe.Entities;
 
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 

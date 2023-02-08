@@ -1,10 +1,11 @@
-package com.example.taskmanagerbe;
+package com.example.taskmanagerbe.Services;
 
+import com.example.taskmanagerbe.Entities.Task;
+import com.example.taskmanagerbe.Repositories.TaskRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TaskServices {
